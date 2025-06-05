@@ -1,0 +1,45 @@
+body {
+    background-color: #F5EDED;
+}
+
+nav {
+    background-color: #FFFCFC;
+    height: 45px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navItem1 {
+    flex-grow: 1;
+    
+}
+
+.navItem2 {
+    flex-grow: 1;
+}
+
+.navItem3 {
+    flex-grow: 1;
+}
+
+.navItem4 {
+    flex-grow: 7;
+}
+
+/* search bar*/
+  .navItem4 input {
+    float: right;
+    width: 20%;
+    height: 32px;
+    border: none;
+    border-radius: 20px;
+    font-family: "EB Garamond", serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #29426B;
+    background-color: #F5EDED;
+  }
+
+ 
