@@ -1,8 +1,9 @@
 body {
-    background-color: #F5EDED;
+    background-color: #FFFCFC;
     margin: 0;
 }
 
+/* navigation bar */
 nav {
     background-color: #FFFCFC;
     height: 60px;
@@ -72,4 +73,22 @@ nav {
     background-color: #F5EDED;
   }
 
- 
+ /* Title */
+
+  .hero {
+    height: 600px;
+    width: 100%;
+    background-color: #F5EDED;
+  }
+
+  hr {
+    background-color: #657FA4;
+    height: 2px;
+  }
+
+  #quotes {
+    height: 600px;
+    width: 100%;
+    background-color: #F5EDED;
+    margin-top: 60px;
+  }
