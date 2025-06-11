@@ -15,12 +15,12 @@ nav {
 
 .navItem1 {
     flex-grow: 1;
-    text-align: center;
+    text-align:left;
 }
 
 .navItem2 {
     flex-grow: 1;
-    text-align: center;
+    text-align: left;
 }
 
 .navItem2 ul {
@@ -31,8 +31,11 @@ nav {
 
 .navItem2 li {
   display: inline;
-  padding: 30px;
+  padding: 15px 30px 15px 30px;
+}
 
+.navItem2 li:hover {
+border-bottom: 3px solid #29426B
 }
 
 .navItem3 {
@@ -47,7 +50,7 @@ nav {
 /* search bar*/
   .navItem3 ul {
     float: right;
-    width: 40%;
+    width: 30%;
     height: 35px;
     margin: 40px;
     border: none;
@@ -63,7 +66,7 @@ nav {
 
   .navItem3 input {
     border: none;
-    width: 70%;
+    width: 60%;
     margin: 5px;
     font-family: "Noto Sans", sans-serif;
     font-optical-sizing: auto;
@@ -76,14 +79,44 @@ nav {
  /* Title */
 
   .hero {
-    height: 600px;
+    height: 700px;
     width: 100%;
     background-color: #F5EDED;
+    text-align: center;
   }
 
+  .hero img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+    width: 20%;
+  }
+
+  .hero a {
+    background-color: #CAD3DE;
+    color: #29426B;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 30px;
+    margin: 3%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  .hero a:hover {
+    background-color: #CAD3DE;
+    color: white;
+  }
+  
   hr {
     background-color: #657FA4;
-    height: 2px;
+    height: 3px;
   }
 
   #quotes {
@@ -91,4 +124,40 @@ nav {
     width: 100%;
     background-color: #F5EDED;
     margin-top: 60px;
+  }
+
+  .homepageBody {
+    display: grid;
+    margin: 40px;
+    grid-template-columns: 3fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .myGoalsItem {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: #F5EDED;
+    height: 400px;
+    border-radius: 20px;
+  }
+
+  .writingStreakItem {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background-color: #F5EDED;
+    border-radius: 20px;
+  }
+
+  .informationItem {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color: #CAD3DE;
+    border-radius: 20px;
   }
