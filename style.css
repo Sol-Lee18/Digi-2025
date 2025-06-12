@@ -142,6 +142,60 @@ border-bottom: 3px solid #29426B
     background-color: #F5EDED;
     height: 400px;
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: 2fr 3fr 6fr;
+    grid-template-rows: 1fr 1fr 10fr;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .myGoalsItem img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .myGoalsItem h2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: #29426B;
+    font-size: 200%;
+    margin: 0%;
+  }
+
+  .myGoalsItem h3 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    color: #29426B;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 120%;
+    font-weight: 450;
+    margin: 0%;
+  }
+
+  .dailyWordCount {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    padding-top: 20px;
+  }
+
+  .monthlyWordCount {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    padding-top: 20px;
   }
 
   .writingStreakItem {
@@ -161,3 +215,16 @@ border-bottom: 3px solid #29426B
     background-color: #CAD3DE;
     border-radius: 20px;
   }
+
+/*editor*/
+  #text-area {
+  width: 500px;
+  height: 200px;
+  padding: 10px;
+  font-size: 16px;
+  }
+
+  #word-count {
+  margin-top: 10px;
+  }
+
