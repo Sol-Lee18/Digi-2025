@@ -4,8 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    .carousel-container {
+  width: 90%;
+  max-width: 700px;
+  overflow: hidden;
+  position: relative;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease-in-out;
+  padding: 20px 0;
+}
+
+.card {
+  flex: 0 0 80%;
+  max-width: 80%;
+  background: #5f7ea1;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card.faded {
+  background: #d0dbe7;
+  color: #444;
+}
+
+.card span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.likes {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  font-size: 14px;
+}
+  </style>
 </head>
 <body>
-    Acacia garden
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="card">
+        <p>"The most valuable of all talents is that of never using two words when one will do."</p>
+        <span>- Ernest Hemingway</span>
+        <div class="likes">🤍 532</div>
+      </div>
+      <div class="card faded">
+        <p>"Write what you know."</p>
+        <span>- Mark Twain</span>
+        <div class="likes">🤍 532</div>
+      </div>
+      <div class="card faded">
+        <p>"You can’t wait for inspiration. You have to go after it with a club."</p>
+        <span>- Jack London</span>
+        <div class="likes">🤍 532</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+     document.addEventListener('DOMContentLoaded', () => {
+      const track = document.querySelector('.carousel-track');
+      const cards = document.querySelectorAll('.card');
+      const cardCount = cards.length;
+
+      // Clone first card and append it to the end
+      const firstClone = cards[0].cloneNode(true);
+      track.appendChild(firstClone);
+
+      let index = 0;
+      const moveSlide = () => {
+        index++;
+        track.style.transition = 'transform 0.5s ease-in-out';
+        track.style.transform = `translateX(-${index * (100 + 2)}%)`;
+
+        if (index === cardCount) {
+          setTimeout(() => {
+            track.style.transition = 'none'; // Remove transition for instant reset
+            track.style.transform = `translateX(0%)`;
+            index = 0;
+          }, 500); // Wait for transition to finish
+        }
+      };
+
+      setInterval(moveSlide, 3000);
+    });
+  </script>
 </body>
 </html>

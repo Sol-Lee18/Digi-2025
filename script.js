@@ -8,3 +8,4 @@ function updateWordCount() {
   const words = text.split(/\s+/).length;
   wordCountDisplay.textContent = 'Word Count: ' + words;
 }
+
