@@ -9,3 +9,5 @@ function updateWordCount() {
   wordCountDisplay.textContent = 'Word Count: ' + words;
 }
 
+
+

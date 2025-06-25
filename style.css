@@ -119,6 +119,8 @@ border-bottom: 3px solid #29426B
     height: 3px;
   }
 
+
+  /* quotes carousel */
   #quotes {
     height: 600px;
     width: 100%;
@@ -147,8 +149,9 @@ border-bottom: 3px solid #29426B
   }
 
   .carouselItem {
-    background-color: #CAD3DE;
+    background-color: #657FA4;
     text-align: center;
+    align-content: center;
     padding: 20px;
     border-radius: 20px;
     position: absolute;
@@ -157,8 +160,9 @@ border-bottom: 3px solid #29426B
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
-    transform: rotateY(calc(-5deg * var(--r)))
-    translateX(calc(-800px * var(--r)));
+    transform: rotateY(calc(-10deg * var(--r)))
+    translateX(calc(-1000px * var(--r)));
+    opacity: calc(-1 * var(--abs) + 1.5);
     z-index: calc((var(--position) - var(--abs)));
   }
 
@@ -221,16 +225,18 @@ border-bottom: 3px solid #29426B
 
    .quoteWriting {
     color: #FFFCFC;
-    font-size: 30px;
+    font-size: 40px;
     
   }
 
   .author {
     color: #FFFCFC;
     font-size: 30px;
+    text-align: right;
+    margin: 20px;
   }
 
-
+/* Main body of the homepage - has goals, streak and introduction */
   .homepageBody {
     display: grid;
     margin: 40px;
