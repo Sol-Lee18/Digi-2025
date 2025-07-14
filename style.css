@@ -1,6 +1,7 @@
 body {
     background-color: #FFFCFC;
     margin: 0;
+    overflow-x: hidden;
 }
 
 /* navigation bar */
@@ -114,7 +115,7 @@ border-bottom: 3px solid #29426B
     color: white;
   }
   
-  hr {
+   #inBetween hr {
     background-color: #657FA4;
     height: 3px;
   }
@@ -155,7 +156,7 @@ border-bottom: 3px solid #29426B
     padding: 20px;
     border-radius: 20px;
     position: absolute;
-    width: 600px;
+    width: 800px;
     height: 350px;
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
@@ -222,18 +223,40 @@ border-bottom: 3px solid #29426B
     --position: 5;
   }
 
+  input[type="radio"] {
+    accent-color: #29426B;
+    width: 1.75em;
+    height: 1.75em;
+  }
+
+  input[type="radio"]::before {
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #29426B;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
 
    .quoteWriting {
     color: #FFFCFC;
     font-size: 40px;
-    
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
   }
 
   .author {
     color: #FFFCFC;
-    font-size: 30px;
+    font-size: 40px;
     text-align: right;
     margin: 20px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
   }
 
 /* Main body of the homepage - has goals, streak and introduction */
@@ -244,6 +267,7 @@ border-bottom: 3px solid #29426B
     grid-template-rows: 1fr 1fr 1fr;
     gap: 40px;
   }
+
 
   .myGoalsItem {
     grid-column-start: 1;
@@ -257,8 +281,9 @@ border-bottom: 3px solid #29426B
     grid-template-columns: 2fr 3fr 6fr;
     grid-template-rows: 1fr 1fr 10fr;
     gap: 10px;
-    padding: 20px;
+    padding: 40px;
   }
+
 
   .myGoalsItem img {
     grid-column-start: 1;
@@ -269,15 +294,19 @@ border-bottom: 3px solid #29426B
     align-self: center;
   }
 
+
   .myGoalsItem h2 {
     grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
     color: #29426B;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
     font-size: 200%;
     margin: 0%;
   }
+
 
   .myGoalsItem h3 {
     grid-column-start: 2;
@@ -291,6 +320,7 @@ border-bottom: 3px solid #29426B
     margin: 0%;
   }
 
+
   .dailyWordCount {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -299,6 +329,7 @@ border-bottom: 3px solid #29426B
     justify-self: center;
     padding-top: 20px;
   }
+
 
   .monthlyWordCount {
     grid-column-start: 3;
@@ -309,6 +340,7 @@ border-bottom: 3px solid #29426B
     padding-top: 20px;
   }
 
+
   .writingStreakItem {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -318,6 +350,7 @@ border-bottom: 3px solid #29426B
     border-radius: 20px;
   }
 
+
   .informationItem {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -326,6 +359,86 @@ border-bottom: 3px solid #29426B
     background-color: #CAD3DE;
     border-radius: 20px;
   }
+
+  #informationItemTitle {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 40px 0 40px;
+  }
+
+  #informationItemTitle h1 {
+    color: #ffffff;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-size: 300%;
+    display: inline;
+    flex-grow: 7;
+  }
+
+  #informationItemTitle img {
+    flex-grow: 1;
+    margin-right: 30px;
+  }
+
+  .informationItem p {
+    margin: 40px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 160%;
+    color: #ffffff;
+  }
+
+
+
+/*footer*/
+
+.footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: #29426B;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.footer h1 {
+  color: #F5EDED;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: inline;
+  justify-self: center;
+  font-size: 250%;
+}
+
+#footerLine1 {
+  background-color: #ffffff;
+  height: 3px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 15px;
+  padding: 0;
+  border: 0;
+  align-self: baseline;
+}
+
+#footerLine2 {
+  background-color: #ffffff;
+  height: 3px;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 15px;
+  padding: 0;
+  border: 0;
+  align-self: baseline;
+}
+
 
 /*editor*/
   #text-area {
