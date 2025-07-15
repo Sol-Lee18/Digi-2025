@@ -383,7 +383,7 @@ input[type="radio"]:checked::before {
   }
 
   .informationItem p {
-    margin: 40px;
+    margin: 0 40px 40px 40px;
     font-family: "Noto Sans", sans-serif;
     font-size: 160%;
     color: #ffffff;
@@ -395,8 +395,8 @@ input[type="radio"]:checked::before {
 
 .footer {
   display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 3fr 2fr 3fr;
+  grid-template-rows: 3fr 1fr 3fr 2fr;
   background-color: #29426B;
   align-items: center;
   padding-top: 20px;
@@ -404,6 +404,8 @@ input[type="radio"]:checked::before {
 
 .footer h1 {
   color: #F5EDED;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -420,7 +422,7 @@ input[type="radio"]:checked::before {
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
-  margin: 15px;
+  margin: 15px 50px 15px 30px;
   padding: 0;
   border: 0;
   align-self: baseline;
@@ -433,10 +435,29 @@ input[type="radio"]:checked::before {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 3;
-  margin: 15px;
+  margin: 15px 30px 15px 50px;
   padding: 0;
   border: 0;
   align-self: baseline;
+}
+
+.socialMediaIcons {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.socialMediaIcons ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.socialMediaIcons li {
+  display: inline;
+  padding: 20px;
 }
 
 
