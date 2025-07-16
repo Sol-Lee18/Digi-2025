@@ -5,7 +5,7 @@ body {
 }
 
 /* navigation bar */
-nav {
+.navbar {
     background-color: #FFFCFC;
     height: 60px;
     display: flex;
@@ -77,6 +77,102 @@ border-bottom: 3px solid #29426B
     background-color: #F5EDED;
   }
 
+  .navbarLine {
+    margin: 0;
+    background-color: #F5EDED;
+    height: 4px;
+    border: none;
+  }
+
+
+
+
+
+/*footer*/
+
+.footer {
+  display: grid;
+  grid-template-columns: 3fr 2fr 3fr;
+  grid-template-rows: 3fr 1fr 3fr 2fr;
+  background-color: #29426B;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.footer h1 {
+  color: #F5EDED;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: inline;
+  justify-self: center;
+  font-size: 250%;
+}
+
+#footerLine1 {
+  background-color: #F5EDED;
+  height: 3px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 15px 50px 15px 30px;
+  padding: 0;
+  border: 0;
+  align-self: baseline;
+}
+
+#footerLine2 {
+  background-color: #F5EDED;
+  height: 3px;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  margin: 15px 30px 15px 50px;
+  padding: 0;
+  border: 0;
+  align-self: baseline;
+}
+
+.socialMediaIcons {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.socialMediaIcons ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+
+.socialMediaIcons li {
+  display: inline;
+  padding: 20px;
+}
+
+.footer p {
+   grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  text-align: center;
+  color: #CAD3DE;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+}
+
+
+
+
+
+/* Homepage */
  /* Title */
 
   .hero {
@@ -115,7 +211,7 @@ border-bottom: 3px solid #29426B
     color: white;
   }
   
-   #inBetween hr {
+  hr {
     background-color: #657FA4;
     height: 3px;
   }
@@ -391,74 +487,47 @@ input[type="radio"]:checked::before {
 
 
 
-/*footer*/
 
-.footer {
-  display: grid;
-  grid-template-columns: 3fr 2fr 3fr;
-  grid-template-rows: 3fr 1fr 3fr 2fr;
-  background-color: #29426B;
-  align-items: center;
-  padding-top: 20px;
+
+
+
+
+
+
+
+/*Acacia Garden*/
+.acaciaGardenTitle {
+  background-color: #CAD3DE;
+  padding: 5px;
 }
 
-.footer h1 {
-  color: #F5EDED;
+.acaciaGardenTitle h1 {
   font-family: "Libre Baskerville", serif;
-  font-weight: 400;
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  display: inline;
-  justify-self: center;
-  font-size: 250%;
-}
-
-#footerLine1 {
-  background-color: #ffffff;
-  height: 3px;
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  margin: 15px 50px 15px 30px;
-  padding: 0;
-  border: 0;
-  align-self: baseline;
-}
-
-#footerLine2 {
-  background-color: #ffffff;
-  height: 3px;
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  margin: 15px 30px 15px 50px;
-  padding: 0;
-  border: 0;
-  align-self: baseline;
-}
-
-.socialMediaIcons {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-.socialMediaIcons ul {
-  list-style: none;
-  width: 100%;
-  padding: 0;
+  font-weight: 500;
+  color: #29426B;
   text-align: center;
 }
 
-.socialMediaIcons li {
-  display: inline;
-  padding: 20px;
+.gardenBody {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 30px;
 }
+
+.preview {
+  background-color: #F5EDED;
+}
+
+
+
+
+
+
+
+
+
 
 
 /*editor*/
@@ -472,5 +541,6 @@ input[type="radio"]:checked::before {
   #word-count {
   margin-top: 10px;
   }
+
 
 
