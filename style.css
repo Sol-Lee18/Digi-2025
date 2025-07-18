@@ -513,34 +513,38 @@ input[type="radio"]:checked::before {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 80px;
-  margin: 50px 250px;
+  margin: 5% 17%;
 }
 
 .preview {
   background-color: #F5EDED;
   border-radius: 3px;
-  
+
+}
+
+.previewTitleDiv {
+  width: 85%;
+  display: block;
+  border-radius: 15px;
+  background-color: #FFFCFC;
+  align-content: center;
+  text-align: center;
+  margin: 30px auto 20px auto;
 }
 
 #previewTitleOutput {
-  display: block;
-  background-color: #FFFCFC;
-  border-radius: 10px;
-  margin: auto;
-  padding: 10px;
-  width: 80%;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 20px;
   font-family: "Libre Baskerville", serif;
   font-weight: 500;
-  font-size: 130%;
+  font-size: 140%;
+  color: #1f1f20;
 }
 
 .previewBodyDiv {
   width: 85%;
   height: 300px;
   display: block;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: #FFFCFC;
   align-content: center;
   text-align: center;
@@ -555,19 +559,57 @@ input[type="radio"]:checked::before {
   margin: 20px;
 }
 
+.previewLikesGrid {
+  display: grid;
+  grid-template-rows: 1;
+  grid-template-columns: 1fr 2fr 9fr 2fr 1fr;
+  align-items: center;
+  margin: 10px 25px;
+}
+
 #likeButton {
   background-color: #F5EDED;
   border: none;
-  padding: 15px;
-  display: inline;
-  
+  padding: 0;
+  display: inline-block;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
 #likeCount {
-  
+  padding: 0;
+  display: inline-block;
+  align-self: center;
+  justify-self: center;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #F5A7A4;
 }
 
+#branchesButton {
+  background-color: #F5EDED;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
 
+#branchesCount {
+  padding: 0;
+  display: inline-block;
+  align-self: center;
+  justify-self: right;
+  grid-column-start: 5;
+  grid-column-end: 6;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-size: 25px;
+  color: #29426B;
+}
 
 
 
