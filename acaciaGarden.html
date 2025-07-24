@@ -42,10 +42,10 @@
     <div class="gardenBody">
         <div class="preview">
             <div class="previewTitleDiv">
-                <h2 id="previewTitleOutput">Substitute</h2>
+                <h2 id="previewTitleOutput"></h2>
             </div>
             <div class="previewBodyDiv">
-                <p id="previewBodyOutput">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</p>
+                <p id="previewBodyOutput"></p>
             </div>
             <div class="previewLikesGrid">
                 <button id="likeButton"><img src="./Images/heart.png"></button>
@@ -87,3 +87,10 @@
     </div>
 </body>
 </html>
+
+
+<script>
+    document.getElementById("previewTitleOutput").innerText = "Variable";
+    document.getElementById("previewBodyOutput").innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+    
+</script>
