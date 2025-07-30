@@ -496,12 +496,12 @@ input[type="radio"]:checked::before {
 
 
 /*Acacia Garden*/
-.acaciaGardenTitle {
+.MainTitle {
   background-color: #CAD3DE;
   padding: 5px;
 }
 
-.acaciaGardenTitle h1 {
+.MainTitle h1 {
   font-family: "Libre Baskerville", serif;
   font-weight: 500;
   color: #29426B;
@@ -616,11 +616,31 @@ input[type="radio"]:checked::before {
 
 
 /*editor*/
+
+.editorBody {
+  justify-self: center;
+  width: 70%;
+  height: 70%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #CAD3DE;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  padding: 20px;
+}
+
+#editorLine {
+  background-color: #CAD3DE;
+  height: 2px;
+  border: none;
+}
+
   #text-area {
-  width: 500px;
-  height: 200px;
+  width: 98.5%;
+  height: 500px;
   padding: 10px;
   font-size: 16px;
+  border: none;
   }
 
   #word-count {

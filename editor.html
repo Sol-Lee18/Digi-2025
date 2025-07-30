@@ -3,12 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editor</title>
+    <link href="./Images/logo.png" rel="shortcut icon" type="img/x-icon">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link href="./script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
-     <h3>Write</h3>
-  <textarea id="text-area" placeholder="Start writing here..."></textarea>
-  <p id="word-count">Word Count: 0</p>
+    <nav class="navbar">
+        <div class="navItem1">
+            <img id="AcaciapagesTitle" src="./Images/acaciapagesTitle.png" alt="AcaciapagesTitle" width="260"> 
+        </div>
+        <div class="navItem2">
+            <ul>
+                <li><a href="./index.html"><img id="navbarHomeIcon" src="./Images/navbarHomeIcon.png" width="80"></a></li>
+                <li><a href="./acaciaGarden.html"><img id="navbarGardenIcon" src="./Images/navbarGardenIcon.png" width="80"></a></li>
+                <li><a href="./editor.html"><img id="navbarCreateIcon" src="./Images/navbarCreateIcon.png" width="80"></a> </li>
+            </ul>
+        </div>
+        <div class="navItem3">
+            <ul>
+                <li><img id="navbarSearchIcon" src="./Images/navbarSearchIcon.png" width="20"></li>
+                <li><input type="text" placeholder="   Search..."></li>
+            </ul>
+        </div>
+    </nav>
+
+  <hr class="navbarLine">
+    <br>
+    <br>
+
+  <div class="MainTitle"><h1>Create Your Story</h1></div>
+    <br>
+    <br>
+
+  <div class="editorBody">
+    <input id="storyTitle">
+    <select>
+      <option value="h1">Heading 1</option>
+      <option value="h2">Sub heading</option>
+      <option value="p">Normal</option>
+    </select>
+    <button id="bold" class="optionButton"><i class="fa-solid fa-bold"></i></button>
+    <button id="italics" class="optionButton"><i class="fa-solid fa-italic"></i></button>
+    <button id="strikethrough" class="optionButton"><i class="fa-solid fa-strikethrough"></i></button>
+    <button id="underline" class="optionButton"><i class="fa-solid fa-underline"></i></button>
+    <hr id="editorLine">
+    
+
+
+    <textarea id="text-area" placeholder="Start writing here..."></textarea>
+    <p id="word-count">Word Count: 0</p>
+
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>
