@@ -629,6 +629,39 @@ input[type="radio"]:checked::before {
   padding: 20px;
 }
 
+#storyTitle {
+  border: none;
+  font-family: "Libre Baskerville", serif;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#storyTitle:focus {
+  border: 1px solid #CAD3DE;
+}
+
+#selectFontSize {
+  border: 1px solid #CAD3DE;
+  font-family: "Libre Baskerville", serif;
+  font-size: 18px;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: #6b6b6b;
+}
+
+.optionButton {
+  border: 1px solid #CAD3DE;
+  font-size: 20px;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: #6b6b6b;
+  background-color: #FFFFFF;
+}
+
 #editorLine {
   background-color: #CAD3DE;
   height: 2px;
