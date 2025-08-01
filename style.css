@@ -642,7 +642,7 @@ input[type="radio"]:checked::before {
   border: 1px solid #CAD3DE;
 }
 
-#selectFontSize {
+.fontOptionsButton {
   border: 1px solid #CAD3DE;
   font-family: "Libre Baskerville", serif;
   font-size: 18px;
@@ -662,6 +662,10 @@ input[type="radio"]:checked::before {
   background-color: #FFFFFF;
 }
 
+ .active {
+    background-color: #CAD3DE;
+  }
+
 #editorLine {
   background-color: #CAD3DE;
   height: 2px;
@@ -679,6 +683,8 @@ input[type="radio"]:checked::before {
   #word-count {
   margin-top: 10px;
   }
+
+ 
 
 
 
