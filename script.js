@@ -1,4 +1,4 @@
-/* const textarea = document.getElementById("text-area");
+const textarea = document.getElementById("text-area");
 
 function f2(e){
  if(textarea.style.fontWeight == "bold")
@@ -51,54 +51,6 @@ function f5(e){
     e.classList.add("active");
  }
 }
-*/
-
-
-
-
-let optionsButtons = document.querySelectorAll(".optionButton");
-let fontOptionsButton = document.querySelectorAll(".fontOptionsButton");
-let formatButtons = document.querySelectorAll(".format");
-let writingArea = document.getElementById("text-area");
-
-const initializer = () => {
-  highlighter(formatButtons, false);
-}
-
-const modifyText = (command, defaultUi, value) => {
-  document.execCommand(command, defaultUi, value);
-};
-
-optionsButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    modifyText(button.id, false, null);
-  });
-})
-
-
-
-const highlighter = (className, needsRemoval) => {
-  className.forEach((button) => {
-    button.addEventListener("click", () => {
-      if (needsRemoval) {
-        let alreadyActive = false;
-
-        if (button.classList.contains("active")) {
-          alreadyActive = true;
-        }
-
-        highligherRemover(className);
-        if(!alreadyActive) {
-          button.classList.add("active");
-        }
-      } else {
-        button.classList.toggle("active");
-      }
-    });
-  });
-};
-
-window.onload = initializer();
 
 
 

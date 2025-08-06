@@ -642,7 +642,7 @@ input[type="radio"]:checked::before {
   border: 1px solid #CAD3DE;
 }
 
-.fontOptionsButton {
+.input[type=number] {
   border: 1px solid #CAD3DE;
   font-family: "Libre Baskerville", serif;
   font-size: 18px;
@@ -666,7 +666,7 @@ input[type="radio"]:checked::before {
   background-color: #e8ebee;
 }
 
- button.active {
+.active {
     background-color: #e8ebee;
   }
 
