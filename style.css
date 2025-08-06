@@ -662,8 +662,12 @@ input[type="radio"]:checked::before {
   background-color: #FFFFFF;
 }
 
- .active {
-    background-color: #CAD3DE;
+.optionButton:hover {
+  background-color: #e8ebee;
+}
+
+ button.active {
+    background-color: #e8ebee;
   }
 
 #editorLine {
@@ -676,6 +680,8 @@ input[type="radio"]:checked::before {
   width: 98.5%;
   height: 500px;
   padding: 10px;
+  border-radius: 3px;
+  outline: none;
   font-size: 16px;
   border: none;
   }
