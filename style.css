@@ -94,7 +94,7 @@ border-bottom: 3px solid #29426B
   display: grid;
   grid-template-columns: 3fr 2fr 3fr;
   grid-template-rows: 3fr 1fr 3fr 2fr;
-  background-color: #29426B;
+  background-color: #8694aa;
   align-items: center;
   padding-top: 20px;
 }
@@ -138,21 +138,21 @@ border-bottom: 3px solid #29426B
   align-self: baseline;
 }
 
-.socialMediaIcons {
+.shortcuts {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
   grid-row-end: 4;
 }
 
-.socialMediaIcons ul {
+.shortcuts ul {
   list-style: none;
   width: 100%;
   padding: 0;
   text-align: center;
 }
 
-.socialMediaIcons li {
+.shortcuts li {
   display: inline;
   padding: 20px;
 }
@@ -642,6 +642,10 @@ input[type="radio"]:checked::before {
   border: 1px solid #CAD3DE;
 }
 
+.allOptionButtons {
+  float: right;
+}
+
 input[type=number] {
   border: 1px solid #CAD3DE;
   font-size: 20px;
@@ -655,13 +659,14 @@ input[type=number] {
 }
 
 .optionButton {
-  border: 1px solid #CAD3DE;
+  border: 0px;
   font-size: 20px;
   outline: none;
   border-radius: 5px;
   padding: 5px;
-  color: #6b6b6b;
+  color: #6d6e70;
   background-color: #FFFFFF;
+  margin-left: 5px;
 }
 
 .optionButton:hover {
@@ -684,12 +689,41 @@ input[type=number] {
   padding: 10px;
   border-radius: 3px;
   outline: none;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
+  font-family:'Times New Roman', Times, serif;
+  resize: vertical;
+  }
+
+  .submitFlex {
+  display: flex;
+  justify-content: center;
+  }
+
+  #submitPost {
+    width: 72%;
+    height: 40px;
+    background-color: #cad3de;
+    outline: none;
+    border: 1px solid #CAD3DE;
+    border-radius: 10px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 18px;
+    color: #6b6b6b;
+    margin: 20px;
+  }
+
+  #submitPost:hover {
+    background-color: #657FA4;
+    color: white;
   }
 
   #word-count {
-  margin-top: 10px;
+    text-align: right;
+    margin: 0;
+    color: #EFB8B6;
+    font-family: "Libre Baskerville", serif;
+    font-size: 15px;
   }
 
  

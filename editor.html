@@ -44,8 +44,9 @@
 
   <div class="editorBody">
     <input id="storyTitle" placeholder="Edit Title">
-    <input type="number" id="fontSize" min="1" max="100" value="16" onchange="f1(this)">
-      
+
+    <div class="allOptionButtons">
+    <input type="number" id="fontSize" min="1" max="100" value="12" onchange="f1(this)">
     <button type="button" class="optionButton" onclick="f2(this)"> <i class="fa-solid fa-bold"></i></button>
     <button type="button" class="optionButton" onclick="f3(this)"> <i class="fa-solid fa-italic"></i></button>
     <button type="button" class="optionButton" onclick="f4(this)"> <i class="fa-solid fa-strikethrough"></i></button>
@@ -53,15 +54,16 @@
     <button type="button" class="optionButton" onclick="f6(this)"> <i class="fa-solid fa-align-left"></i></button>
     <button type="button" class="optionButton" onclick="f7(this)"> <i class="fa-solid fa-align-center"></i></button>
     <button type="button" class="optionButton" onclick="f8(this)"> <i class="fa-solid fa-align-right"></i></button>
+    </div>
     <hr id="editorLine">
 
     <textarea id="text-area" contenteditable="true" placeholder="Start writing here..."></textarea>
     <p id="word-count">Word Count: 0</p>
-
   </div>
 
+  <div class="submitFlex">
   <button id="submitPost">Publish</button>
-  
+  </div>
 
 
   <script type="module">
