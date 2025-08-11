@@ -642,14 +642,16 @@ input[type="radio"]:checked::before {
   border: 1px solid #CAD3DE;
 }
 
-.input[type=number] {
+input[type=number] {
   border: 1px solid #CAD3DE;
-  font-family: "Libre Baskerville", serif;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 600;
   outline: none;
   border-radius: 5px;
   padding: 5px;
   color: #6b6b6b;
+  width: 40px;
+
 }
 
 .optionButton {

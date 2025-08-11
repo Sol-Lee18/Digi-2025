@@ -86,12 +86,33 @@
         </div>
         <p>©2025SolLee</p>
     </div>
+
+
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import { getDatabase, ref, query, orderByChild, limitToLast, get } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDNCknujv99lhPkfXdQ4dRJVc-H8ZJg-M8",
+    authDomain: "acacia-pages-database.firebaseapp.com",
+    databaseURL: "https://acacia-pages-database-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "acacia-pages-database",
+    storageBucket: "acacia-pages-database.firebasestorage.app",
+    messagingSenderId: "456686471317",
+    appId: "1:456686471317:web:8e04adffa50507c7ecf39c",
+    measurementId: "G-47S5H3ZR6S"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+
+
+</script>
+
 </body>
 </html>
 
 
-<script>
-    document.getElementById("previewTitleOutput").innerText = "Variable";
-    document.getElementById("previewBodyOutput").innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-    
-</script>

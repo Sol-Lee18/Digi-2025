@@ -44,29 +44,87 @@
 
   <div class="editorBody">
     <input id="storyTitle" placeholder="Edit Title">
-    <input type="number" id="font-size" min="1" max="100" value="16" onchange="f1(this)">
+    <input type="number" id="fontSize" min="1" max="100" value="16" onchange="f1(this)">
       
     <button type="button" class="optionButton" onclick="f2(this)"> <i class="fa-solid fa-bold"></i></button>
     <button type="button" class="optionButton" onclick="f3(this)"> <i class="fa-solid fa-italic"></i></button>
     <button type="button" class="optionButton" onclick="f4(this)"> <i class="fa-solid fa-strikethrough"></i></button>
     <button type="button" class="optionButton" onclick="f5(this)"> <i class="fa-solid fa-underline"></i></button>
-    <button id="undo" class="optionButton"><i class="fa-solid fa-rotate-left"></i></button>
-    <button id="redo" class="optionButton"><i class="fa-solid fa-rotate-right"></i></button>
+    <button type="button" class="optionButton" onclick="f6(this)"> <i class="fa-solid fa-align-left"></i></button>
+    <button type="button" class="optionButton" onclick="f7(this)"> <i class="fa-solid fa-align-center"></i></button>
+    <button type="button" class="optionButton" onclick="f8(this)"> <i class="fa-solid fa-align-right"></i></button>
     <hr id="editorLine">
 
     <textarea id="text-area" contenteditable="true" placeholder="Start writing here..."></textarea>
     <p id="word-count">Word Count: 0</p>
 
   </div>
-  <script src="./script.js"></script>
+
+  <button id="submitPost">Publish</button>
+  
+
+
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
+  import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDNCknujv99lhPkfXdQ4dRJVc-H8ZJg-M8",
+    authDomain: "acacia-pages-database.firebaseapp.com",
+    databaseURL: "https://acacia-pages-database-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "acacia-pages-database",
+    storageBucket: "acacia-pages-database.firebasestorage.app",
+    messagingSenderId: "456686471317",
+    appId: "1:456686471317:web:8e04adffa50507c7ecf39c",
+    measurementId: "G-47S5H3ZR6S"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+  const submitBtn = document.getElementById('submitPost');
+
+submitBtn.addEventListener('click', () => {
+  const title = document.getElementById('storyTitle').value.trim();
+  const content = document.getElementById('text-area').value.trim();
+  const fontSize = document.getElementById('fontSize').value;
+
+  if (!title || !content) {
+    alert("Please add a title and write something before publishing!");
+    return;
+  }
+
+  // Create a new post reference
+  const postsRef = ref(database, 'posts'); // 'posts' is the node where stories will be saved
+  const newPostRef = push(postsRef);
+
+  // Save the post data
+  set(newPostRef, {
+    title: title,
+    content: content,
+    fontSize: fontSize,
+    timestamp: Date.now()
+  })
+  .then(() => {
+    alert("Your story has been published!");
+    // Optionally clear inputs
+    document.getElementById('storyTitle').value = '';
+    document.getElementById('text-area').value = '';
+  })
+  .catch((error) => {
+    alert("Error publishing story: " + error.message);
+  });
+});
+
+</script>
+<script src="./script.js"></script>
 </body>
 </html>
 
-
-
-
-
-    <button type="button" class="optionButton" onclick="f2(this)"> <i class="fa-solid fa-bold"></i></button>
-    <button type="button" class="optionButton" onclick="f3(this)"> <i class="fa-solid fa-italic"></i></button>
-    <button type="button" class="optionButton" onclick="f4(this)"> <i class="fa-solid fa-strikethrough"></i></button>
-    <button type="button" class="optionButton" onclick="f5(this)"> <i class="fa-solid fa-underline"></i></button>

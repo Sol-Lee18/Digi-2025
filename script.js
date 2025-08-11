@@ -1,5 +1,10 @@
 const textarea = document.getElementById("text-area");
 
+function f1(e){
+   let value = e.value;
+   textarea.style.fontSize = value + "px";
+}
+
 function f2(e){
  if(textarea.style.fontWeight == "bold")
  {
@@ -52,6 +57,18 @@ function f5(e){
  }
 }
 
+function f6(e){
+   textarea.style.textAlign = "left";
+}
+
+function f7(e){
+   textarea.style.textAlign = "center";
+}
+
+function f8(e){
+   textarea.style.textAlign = "right";
+}  
+
 
 
 
@@ -65,3 +82,8 @@ function updateWordCount() {
   const words = text.split(/\s+/).length;
   wordCountDisplay.textContent = 'Word Count: ' + words;
 }
+
+
+
+
+
