@@ -65,11 +65,24 @@
   <button id="submitPost">Publish</button>
   </div>
 
+ <div class="footer">
+        <h1>Acaciapages</h1>
+        <hr id="footerLine1">
+        <hr id="footerLine2">
+        <div class="shortcuts">
+            <ul>
+                <li><a href="./index.html"><img src="./Images/footerHomeIcon.png" width="40px"></a></li>
+                <li><a href="./acaciaGarden.html"><img src="./Images/footerGardenIcon.png" width="40px"></a></li>
+                <li><a href="./editor.html"><img src="./Images/footerCreateIcon.png" width="40px"></a></li>
+            </ul>
+        </div>
+        <p>©2025SolLee</p>
+    </div>
 
-  <script type="module">
+
+<script type="module">
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
   import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
   // TODO: Add SDKs for Firebase products that you want to use
@@ -91,32 +104,28 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const database = getDatabase(app);
-  const submitBtn = document.getElementById('submitPost');
+  const submitButton = document.getElementById('submitPost');
 
-submitBtn.addEventListener('click', () => {
+submitButton.addEventListener('click', () => {
   const title = document.getElementById('storyTitle').value.trim();
   const content = document.getElementById('text-area').value.trim();
-  const fontSize = document.getElementById('fontSize').value;
 
   if (!title || !content) {
     alert("Please add a title and write something before publishing!");
     return;
   }
 
-  // Create a new post reference
-  const postsRef = ref(database, 'posts'); // 'posts' is the node where stories will be saved
+  const postsRef = ref(database, 'posts'); 
   const newPostRef = push(postsRef);
 
-  // Save the post data
+  
   set(newPostRef, {
     title: title,
     content: content,
-    fontSize: fontSize,
     timestamp: Date.now()
   })
   .then(() => {
     alert("Your story has been published!");
-    // Optionally clear inputs
     document.getElementById('storyTitle').value = '';
     document.getElementById('text-area').value = '';
   })
