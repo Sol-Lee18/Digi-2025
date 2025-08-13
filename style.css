@@ -511,15 +511,14 @@ input[type="radio"]:checked::before {
 .gardenBody {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 80px;
-  margin: 5% 17%;
+  grid-template-rows: auto;
+  gap: 40px;
+  margin: 5% 12%;
 }
 
 .preview {
   background-color: #F5EDED;
-  border-radius: 3px;
-
+  border-radius: 5px;
 }
 
 .previewTitleDiv {
@@ -576,6 +575,10 @@ input[type="radio"]:checked::before {
   grid-column-end: 2;
 }
 
+#likeButton:hover {
+   transform: scale(1.1);
+}
+
 #likeCount {
   padding: 0;
   display: inline-block;
@@ -596,6 +599,10 @@ input[type="radio"]:checked::before {
   display: inline-block;
   grid-column-start: 4;
   grid-column-end: 5;
+}
+
+#branchesButton:hover {
+   transform: scale(1.1);
 }
 
 #branchesCount {

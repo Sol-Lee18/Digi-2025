@@ -34,14 +34,14 @@
         </div>
     </nav>
 
-    <hr class="navbarLine">
-    <br>
     <br>
 
-    <div class="MainTitle"><h1>Acacia Garden</h1></div>
+     <div class="editorBody">
+    <h1 id="postTitle">Loading...</h1>
+    <div id="postContent"></div>
+  </div>
 
-    <div id="posts" class="gardenBody"></div>
-
+    <br>
 
     <div class="footer">
         <h1>Acaciapages</h1>
@@ -56,11 +56,10 @@
         </div>
         <p>©2025SolLee</p>
     </div>
-
-
+    
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-    import { getDatabase, ref, query, orderByChild, onValue} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+    import { getDatabase, ref, get} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
 
     const firebaseConfig = {
@@ -78,58 +77,28 @@
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
 
-    const postsContainer = document.getElementById("posts");
 
-        
-    const postsQuery = query(ref(db, "posts"), orderByChild("timestamp"));
+    const urlParams = new URLSearchParams(window.location.search);
+    const postId = urlParams.get("postId");
 
-    onValue(postsQuery, (snapshot) => {
-        postsContainer.innerHTML = ""; 
-        const posts = [];
+    if (postId) {
+      const postRef = ref(db, `posts/${postId}`);
+      get(postRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          const post = snapshot.val();
+          document.getElementById("postTitle").innerText = post.title || "Untitled";
+          document.getElementById("postContent").innerText = post.content || "";
+          document.getElementById("pageTitle").innerText = post.title || "Post";
+        } else {
+          document.getElementById("postTitle").innerText = "Post not found";
+          document.getElementById("postContent").innerText = "";
+        }
+      });
+    } else {
+      document.getElementById("postTitle").innerText = "No post specified";
+      document.getElementById("postContent").innerText = "";
+    }
 
-        snapshot.forEach((childSnapshot) => {
-            posts.push({
-                key: childSnapshot.key,
-                ...childSnapshot.val()
-            });
-        });        
-
-            
-        posts.sort((a, b) => b.timestamp - a.timestamp);
-
-            
-        posts.forEach((post) => {
-            const preview = document.createElement("div");
-            preview.classList.add("preview");
-
-            preview.innerHTML = `
-                <div class="previewTitleDiv">
-                    <h2 id="previewTitleOutput">${post.title || "Untitled"}</h2>
-                </div>
-                <div class="previewBodyDiv">
-                    <p id="previewBodyOutput">${post.content ? post.content.split(" ").slice(0, 30).join(" ") + (post.content.split(" ").length > 30 ? "..." : "") : ""}</p>
-                </div>
-                <div class="previewLikesGrid">
-                    <button id="likeButton"><img src="./Images/heart.png"></button>
-                    <span id="likeCount">${post.likes || 0}</span>
-                    <button id="branchesButton"><img src="./Images/branch.png"></button>
-                    <span id="branchesCount">${post.branches || 0}</span>
-                </div>
-            `;
-
-            preview.querySelector(".previewBodyDiv").addEventListener("click", () => {
-            window.location.href = `./post.html?postId=${post.key}`;
-            });
-
-            postsContainer.appendChild(preview);
-            });
-
-    });
-
-    
 </script>
 </body>
 </html>
-
-
-
