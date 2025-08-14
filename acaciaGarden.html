@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 </head>
     
 <body>
@@ -26,12 +27,6 @@
                 <li><a href="./editor.html"><img id="navbarCreateIcon" src="./Images/navbarCreateIcon.png" width="80"></a> </li>
             </ul>
         </div>
-        <div class="navItem3">
-            <ul>
-                <li><img id="navbarSearchIcon" src="./Images/navbarSearchIcon.png" width="20"></li>
-                <li><input type="text" placeholder="   Search..."></li>
-            </ul>
-        </div>
     </nav>
 
     <hr class="navbarLine">
@@ -39,6 +34,14 @@
     <br>
 
     <div class="MainTitle"><h1>Acacia Garden</h1></div>
+
+    <form>
+        <div class="searchBar">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" placeholder="   Search...">
+            </ul>
+        </div>
+    </form>
 
     <div id="posts" class="gardenBody"></div>
 
@@ -105,6 +108,7 @@
             preview.innerHTML = `
                 <div class="previewTitleDiv">
                     <h2 id="previewTitleOutput">${post.title || "Untitled"}</h2>
+                    <h3 id="previewAuthorOutput">${post.author || "anonymous"}</h3>
                 </div>
                 <div class="previewBodyDiv">
                     <p id="previewBodyOutput">${post.content ? post.content.split(" ").slice(0, 30).join(" ") + (post.content.split(" ").length > 30 ? "..." : "") : ""}</p>

@@ -36,8 +36,9 @@
 
     <br>
 
-     <div class="editorBody">
+     <div class="postBody">
     <h1 id="postTitle">Loading...</h1>
+    <h3 id="postAuthor"></h3>
     <div id="postContent"></div>
   </div>
 
@@ -87,15 +88,17 @@
         if (snapshot.exists()) {
           const post = snapshot.val();
           document.getElementById("postTitle").innerText = post.title || "Untitled";
+          document.getElementById("postAuthor").innerText = post.author || "Anonymous";
           document.getElementById("postContent").innerText = post.content || "";
-          document.getElementById("pageTitle").innerText = post.title || "Post";
         } else {
           document.getElementById("postTitle").innerText = "Post not found";
+          document.getElementById("postAuthor").innerText = post.author || "";
           document.getElementById("postContent").innerText = "";
         }
       });
     } else {
       document.getElementById("postTitle").innerText = "No post specified";
+      document.getElementById("postAuthor").innerText = post.author || "";
       document.getElementById("postContent").innerText = "";
     }
 

@@ -43,7 +43,8 @@
     <br>
 
   <div class="editorBody">
-    <input id="storyTitle" placeholder="Edit Title">
+    <input id="storyTitle" class="storyInformation" placeholder="Edit Title">
+    <input id="storyAuthor" class="storyInformation" placeholder="Author Name">
 
     <div class="allOptionButtons">
     <input type="number" id="fontSize" min="1" max="100" value="12" onchange="f1(this)">
@@ -108,6 +109,7 @@
 
 submitButton.addEventListener('click', () => {
   const title = document.getElementById('storyTitle').value.trim();
+  const author = document.getElementById('storyAuthor').value.trim();
   const content = document.getElementById('text-area').value.trim();
 
   if (!title || !content) {
@@ -121,12 +123,14 @@ submitButton.addEventListener('click', () => {
   
   set(newPostRef, {
     title: title,
+    author: author,
     content: content,
     timestamp: Date.now()
   })
   .then(() => {
     alert("Your story has been published!");
     document.getElementById('storyTitle').value = '';
+    document.getElementById('storyAuthor').value = '';
     document.getElementById('text-area').value = '';
   })
   .catch((error) => {

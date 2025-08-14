@@ -20,7 +20,7 @@ body {
 }
 
 .navItem2 {
-    flex-grow: 1;
+    flex-grow: 30;
     text-align: left;
 }
 
@@ -39,50 +39,12 @@ body {
 border-bottom: 3px solid #29426B
 }
 
-.navItem3 {
-    flex-grow: 7;
+.navbarLine {
+  margin: 0;
+  background-color: #F5EDED;
+  height: 4px;
+  border: none;
 }
-
-.navItem3 li {
-  display: inline;
-  vertical-align: middle;
-}
-
-/* search bar*/
-  .navItem3 ul {
-    float: right;
-    width: 30%;
-    height: 35px;
-    margin: 40px;
-    border: none;
-    border-radius: 20px;
-    color: #29426B;
-    list-style-type: none;
-    background-color: #F5EDED;
-  }
-
-  #navbarSearchIcon {
-    margin-top: 5px;
-  }
-
-  .navItem3 input {
-    border: none;
-    width: 60%;
-    margin: 5px;
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-size: 17px;
-    background-color: #F5EDED;
-  }
-
-  .navbarLine {
-    margin: 0;
-    background-color: #F5EDED;
-    height: 4px;
-    border: none;
-  }
 
 
 
@@ -508,6 +470,56 @@ input[type="radio"]:checked::before {
   text-align: center;
 }
 
+/*search*/
+
+.searchBar {
+  justify-items: center;
+}
+
+.searchBar li {
+  display: inline;
+  vertical-align: middle;
+}
+
+  .searchBar ul {
+    width: 30%;
+    height: 35px;
+    margin: 40px;
+    border: none;
+    border-radius: 20px;
+    color: #29426B;
+    list-style-type: none;
+    background-color: #F5EDED;
+  }
+
+  #SearchIcon {
+    margin-top: 5px;
+  }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+  .searchBar input {
+    border: none;
+    width: 60%;
+    margin: 5px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 17px;
+    background-color: #F5EDED;
+  }
+
+  /*body*/
+
 .gardenBody {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -537,6 +549,12 @@ input[type="radio"]:checked::before {
   font-weight: 500;
   font-size: 140%;
   color: #1f1f20;
+}
+
+#previewAuthorOutput {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  font-size: 80%;
 }
 
 .previewBodyDiv {
@@ -636,7 +654,7 @@ input[type="radio"]:checked::before {
   padding: 20px;
 }
 
-#storyTitle {
+.storyInformation {
   border: none;
   font-family: "Libre Baskerville", serif;
   font-size: 20px;
@@ -733,6 +751,46 @@ input[type=number] {
     font-size: 15px;
   }
 
+
+
+
+
+
+  /* posts */
+
+  .postBody {
+    justify-self: center;
+    width: 40%;
+    height: auto;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #CAD3DE;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    padding: 50px;
+    margin-top: 50px;
+  }
+
+
+  #postTitle {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  }
+
+  #postAuthor {
+  font-family: "Libre Baskerville", serif;
+  font-weight: 500;
+  color: #000000;
+  text-align: right;
+  }
+
+  #postContent {
+  font-size: 18px;
+  font-family:'Times New Roman', Times, serif;
+  margin-top: 50px;
+  }
  
 
 
