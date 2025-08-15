@@ -37,8 +37,8 @@
 
     <form>
         <div class="searchBar">
-            <span class="material-symbols-outlined">search</span>
-            <input type="text" placeholder="   Search...">
+            <span class="searchIcon material-symbols-outlined">search</span>
+            <input class="searchInput" type="search" placeholder="Search...">
             </ul>
         </div>
     </form>
@@ -130,8 +130,16 @@
 
     });
 
-    
+
+    const searchBar = document.querySelector('.searchInput')
+console.log(searchBar)
+
+searchBar.addEventListener('keyup', (e) => {
+   console.log(e.target.value)
+})
+
 </script>
+<script src="./acaciaGarden.js"></script>
 </body>
 </html>
 

@@ -1,4 +1,4 @@
-
+/*editor*/
 
 const textarea = document.getElementById("text-area");
 
@@ -72,7 +72,7 @@ function f8(e){
 }  
 
 
-
+/*word count*/
 
 const textArea = document.getElementById('text-area');
 const wordCountDisplay = document.getElementById('word-count');
@@ -84,6 +84,11 @@ function updateWordCount() {
   const words = text.split(/\s+/).length;
   wordCountDisplay.textContent = 'Word Count: ' + words;
 }
+
+
+
+
+
 
 
 
