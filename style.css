@@ -473,29 +473,10 @@ input[type="radio"]:checked::before {
 /*search*/
 
 .searchBar {
-  justify-items: center;
+  text-align: center;
+  display: inline-block;
+  background-color: #F5EDED;
 }
-
-.searchBar li {
-  display: inline;
-  vertical-align: middle;
-}
-
-  .searchBar ul {
-    width: 30%;
-    height: 35px;
-    margin: 40px;
-    border: none;
-    border-radius: 20px;
-    color: #29426B;
-    list-style-type: none;
-    background-color: #F5EDED;
-  }
-
-  #SearchIcon {
-    margin-top: 5px;
-  }
-
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -525,7 +506,7 @@ input[type="radio"]:checked::before {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 40px;
-  margin: 5% 12%;
+  margin: 3% 12%;
 }
 
 .preview {
