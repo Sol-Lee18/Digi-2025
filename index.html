@@ -31,7 +31,7 @@
 
     <div class="hero">
         <img alt="logoImage" src="./Images/acaciapagesHeroLogo.png">
-        <a href="./acaciaGarden.html">Start Writing</a>
+        <a href="./post.html">Start Writing</a>
     </div>
     <hr>
 
@@ -41,6 +41,7 @@
         <input type="radio" name="position" checked/>
         <input type="radio" name="position" />
         <input type="radio" name="position" />
+        
         <main id="carousel">
             <div class="carouselItem">
                 <h3 class="quoteWriting">"The most valuable of all talents is that of never using two words when one will do."</h3>
@@ -67,36 +68,27 @@
     <hr>
 
     <div class="homepageBody">
-        <div class="myGoalsItem">
-            <img alt="targetImage" src="./Images/targetImage.png" width="80%">
-            <h2>My Goals</h2>
-            <h3>A goal is a dream with a deadline</h3>
-            <div class="dailyWordCount">
-                <h3>Daily Word Count</h3>
+        <div class="leftColumn">
+            <div class="totalPosts">
+                <img alt="targetImage" src="./Images/targetImage.png" width="80%">
+                <h2>Our Acacia Trees</h2>
+                <h3>Total Number of Acacia Trees Published</h3>
+                <span id="totalPostsCount"></span>
             </div>
-            <div class="monthlyWordCount">
-                <h3>Monthly Word Count</h3>
-            </div>
-        </div>
-        <div class="writingStreakItem">
-            <h2>Writing Streak</h2>
+            <img id="acaciaTreeImage" src="./Images/acaciaTreeImage.jpg">
         </div>
         <div class="informationItem">
             <div id="informationItemTitle">
                 <img alt="fountainPenIcon" src="./Images/acaciaTreeInformationIcon.png" width="1">
             <h1>The Acacia Tree</h1>
             </div>
-            <p> Welcome to The Acacia Tree - where stories grow, one story at a time. 
-                The Acacia Tree is a creative writing platform which offers a fun and meaningful alternative to endless scrolling on social media. 
-                The goal is simple: encourage daily creative writing in short bursts, making imagination a habit. 
-                Each story is called a Tree, and every Tree begins with a short Seed - a small writing prompt about 50 words long. 
-                From there, anyone can add Branches - 100-word story additions that grow the narrative in countless directions. 
-                Other users can then build on those branches, creating new paths and possibilities. 
-                With every contribution, the tree expands - one line, one voice, one idea at a time.
-                Whether you're here to take a break from social media, or simply want to create, this is your space to grow something special. 
-                <br>Something beautiful.
-                <br>Something real.
-                <br>An idea given life - <i>by you.</i></p>
+            <p> Welcome to The Acacia Tree - where stories grow, one idea at a time. 
+                Acaciapages is a creative space designed for teenage and young adult writers to share their short stories, support each other, and grow in confidence. 
+                While there are many writing platforms out there, few are made specifically for young people—who often feel alone in their journey to become authors in a world where books are losing ground to social media. 
+                <br>
+                Each of these stories tells of challenges and resilience, eventually growing into something strong and beautiful
+                - a unique Acacia Tree that thrives even in the harshest conditions.
+                Every Tree in our garden carries its own hardships and triumphs, and they come together to create a safe haven where they can see the voices of others their age, stay motivated, and keep writing — whether it’s a simple hobby or a lifelong dream.
         </div>
     </div>
 
@@ -113,6 +105,42 @@
         </div>
         <p>©2025SolLee</p>
     </div>
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDNCknujv99lhPkfXdQ4dRJVc-H8ZJg-M8",
+    authDomain: "acacia-pages-database.firebaseapp.com",
+    databaseURL: "https://acacia-pages-database-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "acacia-pages-database",
+    storageBucket: "acacia-pages-database.firebasestorage.app",
+    messagingSenderId: "456686471317",
+    appId: "1:456686471317:web:8e04adffa50507c7ecf39c",
+    measurementId: "G-47S5H3ZR6S"
+  };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    const postCountLabel = document.getElementById('totalPostsCount');
+
+    const postsRef = ref(db, "posts");
+
+    onValue(postsRef, (snapshot) => {
+        const count = snapshot.size; 
+        postCountLabel.textContent = count;
+    });
+
+</script>
 
 </body>
 
