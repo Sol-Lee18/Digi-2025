@@ -73,6 +73,14 @@ function f8(e){
    textarea.style.textAlign = "right";
 }  
 
+window.f1 = f1;
+window.f2 = f2;
+window.f3 = f3;
+window.f4 = f4;
+window.f5 = f5;
+window.f6 = f6;
+window.f7 = f7;
+window.f8 = f8;
 
 // word count
 
