@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acacia Garden</title>
-    <link href="./Images/logo.png" rel="shortcut icon" type="img/x-icon">
+    <title>posts</title>
+    <link href="./images/logo.png" rel="shortcut icon" type="img/x-icon">
     <link href="./style.css" rel="stylesheet" type="text/css">
-    <link href="./script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -15,89 +14,45 @@
 </head>
     
 <body>
-    <nav class="navbar">
-        <div class="navItem1">
-            <img id="AcaciapagesTitle" src="./Images/acaciapagesTitle.png" alt="AcaciapagesTitle" width="260"> 
+    <nav class="navbar"> <!-- Navigation bar -->
+        <div class="nav-item1">
+            <img id="acaciapages-title" src="./images/acaciapages-title.png" alt="Acaciapages title" width="260"> 
         </div>
-        <div class="navItem2">
+        <div class="nav-item2">
             <ul>
-                <li><a href="./index.html"><img id="navbarHomeIcon" src="./Images/navbarHomeIcon.png" width="80"></a></li>
-                <li><a href="./acaciaGarden.html"><img id="navbarGardenIcon" src="./Images/navbarGardenIcon.png" width="80"></a></li>
-                <li><a href="./editor.html"><img id="navbarCreateIcon" src="./Images/navbarCreateIcon.png" width="80"></a> </li>
+                <li><a href="./index.html"><img id="navbar-home-icon" alt="navbarHomeIcon" src="./images/navbar-home-icon.png" width="80"></a></li>
+                <li><a href="./acacia-garden.html"><img id="navbar-garden-icon" alt="navbarGardenIcon" src="./images/navbar-garden-icon.png" width="80"></a></li>
+                <li><a href="./editor.html"><img id="navbar-create-icon" alt="navbarCreateIcon" src="./images/navbar-create-icon.png" width="80"></a> </li>
             </ul>
         </div>
     </nav>
 
-    <hr class="navbarLine">
+    <hr class="navbar-line">
 
     <br>
 
-     <div class="postBody">
-    <h1 id="postTitle">Loading...</h1>
-    <h3 id="postAuthor"></h3>
-    <div id="postContent"></div>
+     <div class="post-body"> <!-- Short Story Document -->
+    <h1 id="post-title">Loading...</h1>
+    <div id="post-author"></div>
+    <div id="post-content"></div>
   </div>
 
     <br>
 
-    <div class="footer">
+    <div class="footer"> <!-- Footer -->
         <h1>Acaciapages</h1>
-        <hr id="footerLine1">
-        <hr id="footerLine2">
+        <hr id="footer-line1">
+        <hr id="footer-line2">
         <div class="shortcuts">
             <ul>
-                <li><a href="./index.html"><img src="./Images/footerHomeIcon.png" width="40px"></a></li>
-                <li><a href="./acaciaGarden.html"><img src="./Images/footerGardenIcon.png" width="40px"></a></li>
-                <li><a href="./editor.html"><img src="./Images/footerCreateIcon.png" width="40px"></a></li>
+                <li><a href="./index.html"><img alt="footer-home-icon" src="./images/footer-home-icon.png" width="40"></a></li>
+                <li><a href="./acacia-garden.html"><img alt="footer-garden-icon" src="./images/footer-garden-icon.png" width="40"></a></li>
+                <li><a href="./editor.html"><img alt="footer-create-icon" src="./Images/footer-create-icon.png" width="40"></a></li>
             </ul>
         </div>
         <p>©2025SolLee</p>
     </div>
     
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-    import { getDatabase, ref, get} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
-
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyDNCknujv99lhPkfXdQ4dRJVc-H8ZJg-M8",
-        authDomain: "acacia-pages-database.firebaseapp.com",
-        databaseURL: "https://acacia-pages-database-default-rtdb.asia-southeast1.firebasedatabase.app",
-        projectId: "acacia-pages-database",
-        storageBucket: "acacia-pages-database.firebasestorage.app",
-        messagingSenderId: "456686471317",
-        appId: "1:456686471317:web:8e04adffa50507c7ecf39c",
-        measurementId: "G-47S5H3ZR6S"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get("postId");
-
-    if (postId) {
-      const postRef = ref(db, `posts/${postId}`);
-      get(postRef).then((snapshot) => {
-        if (snapshot.exists()) {
-          const post = snapshot.val();
-          document.getElementById("postTitle").innerText = post.title || "Untitled";
-          document.getElementById("postAuthor").innerText = post.author || "Anonymous";
-          document.getElementById("postContent").innerText = post.content || "";
-        } else {
-          document.getElementById("postTitle").innerText = "Post not found";
-          document.getElementById("postAuthor").innerText = post.author || "";
-          document.getElementById("postContent").innerText = "";
-        }
-      });
-    } else {
-      document.getElementById("postTitle").innerText = "No post specified";
-      document.getElementById("postAuthor").innerText = post.author || "";
-      document.getElementById("postContent").innerText = "";
-    }
-
-</script>
+<script type="module" src="./post.js"></script>
 </body>
 </html>

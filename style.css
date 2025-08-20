@@ -15,32 +15,32 @@ body {
     align-items: center;
 }
 
-.navItem1 {
+.nav-item1 {
     flex-grow: 1;
     text-align:left;
 }
 
-.navItem2 {
+.nav-item2 {
     flex-grow: 30;
     text-align: left;
 }
 
-.navItem2 ul {
+.nav-item2 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-.navItem2 li {
+.nav-item2 li {
   display: inline;
   padding: 15px 30px 15px 30px;
 }
 
-.navItem2 li:hover {
+.nav-item2 li:hover {
 border-bottom: 3px solid #29426B
 }
 
-.navbarLine {
+.navbar-line {
   margin: 0;
   background-color: #F5EDED;
   height: 4px;
@@ -75,7 +75,7 @@ border-bottom: 3px solid #29426B
   font-size: 250%;
 }
 
-#footerLine1 {
+#footer-line1 {
   background-color: #F5EDED;
   height: 3px;
   grid-column-start: 1;
@@ -88,7 +88,7 @@ border-bottom: 3px solid #29426B
   align-self: baseline;
 }
 
-#footerLine2 {
+#footer-line2 {
   background-color: #F5EDED;
   height: 3px;
   grid-column-start: 3;
@@ -143,6 +143,8 @@ border-bottom: 3px solid #29426B
     width: 100%;
     background-color: #F5EDED;
     text-align: center;
+    align-content: center;
+    padding-bottom: 10%;
   }
 
   .hero img {
@@ -208,7 +210,7 @@ border-bottom: 3px solid #29426B
     --position: 1;
   }
 
-  .carouselItem {
+  .carousel-item {
     background-color: #657FA4;
     text-align: center;
     align-content: center;
@@ -225,19 +227,19 @@ border-bottom: 3px solid #29426B
     z-index: calc((var(--position) - var(--abs)));
   }
 
-  .carouselItem:nth-of-type(1) {
+  .carousel-item:nth-of-type(1) {
     --offset: 1;
   }
-  .carouselItem:nth-of-type(2) {
+  .carousel-item:nth-of-type(2) {
     --offset: 2;
   }
-  .carouselItem:nth-of-type(3) {
+  .carousel-item:nth-of-type(3) {
     --offset: 3;
   }
-  .carouselItem:nth-of-type(4) {
+  .carousel-item:nth-of-type(4) {
     --offset: 4;
   }
-  .carouselItem:nth-of-type(5) {
+  .carousel-item:nth-of-type(5) {
     --offset: 5;
   }
   
@@ -288,20 +290,20 @@ border-bottom: 3px solid #29426B
   }
 
   input[type="radio"]::before {
-  width: 0.65em;
-  height: 0.65em;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em #29426B;
-}
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em #29426B;
+  }
 
-input[type="radio"]:checked::before {
-  transform: scale(1);
-}
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
 
 
-   .quoteWriting {
+  .quote-writing {
     color: #FFFCFC;
     font-size: 40px;
     font-family: "Libre Baskerville", serif;
@@ -318,7 +320,7 @@ input[type="radio"]:checked::before {
   }
 
 /* Main body of the homepage - has goals, streak and introduction */
-  .homepageBody {
+  .homepage-body {
     display: grid;
     margin: 40px;
     grid-template-columns: 1fr 2fr;
@@ -327,14 +329,14 @@ input[type="radio"]:checked::before {
     align-items: stretch;
   }
 
-  .leftColumn {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 
 
-  .totalPosts {
+  .total-posts {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
@@ -342,29 +344,22 @@ input[type="radio"]:checked::before {
     background-color: #F5EDED;
     height: fit-content;
     border-radius: 20px;
-    display: grid;
-    grid-template-columns: 2fr 9fr;
-    grid-template-rows: 1fr 1fr 2fr;
-    gap: 10px;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    gap: 15px;
+    padding: 30px;
   }
 
 
-  .totalPosts img {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    justify-self: center;
-    align-self: center;
+  .total-posts img {
+    width: 70px;
+    height: auto;
   }
 
 
-  .totalPosts h2 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 2;
+  .total-posts h2 {
     color: #29426B;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
@@ -373,11 +368,7 @@ input[type="radio"]:checked::before {
   }
 
 
-  .totalPosts h3 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
+  .total-posts h3 {
     color: #29426B;
     font-family: "Noto Sans", sans-serif;
     font-size: 120%;
@@ -386,21 +377,18 @@ input[type="radio"]:checked::before {
   }
 
 
-  #totalPostsCount {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 3;
-    grid-row-end: 4;
+  #total-posts-count {
     justify-self: center;
     align-self: center;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
-    font-size: 200%;
+    font-size: 300%;
     color: #29426B;
+    margin-top: 10px;
   }
 
 
-  #acaciaTreeImage {
+  #acacia-tree-image {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 2;
@@ -412,8 +400,24 @@ input[type="radio"]:checked::before {
     height: auto;
   }
 
+    #credit-image {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 130%;
+    color: #29426B;
+    margin: 0;
+  }
 
-  .informationItem {
+  .left-column a {
+    font-family: "Noto Sans", sans-serif;
+    color: #132b52;
+  }
+
+  .left-column a:hover {
+    color: #657FA4;
+  }
+
+
+  .information-item {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -423,7 +427,7 @@ input[type="radio"]:checked::before {
     height: fit-content;
   }
 
-  #informationItemTitle {
+  #information-item-title {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -431,7 +435,7 @@ input[type="radio"]:checked::before {
     padding: 40px 40px 0 40px;
   }
 
-  #informationItemTitle h1 {
+  #information-item-title h1 {
     color: #ffffff;
     font-family: "Libre Baskerville", serif;
     font-weight: 400;
@@ -440,12 +444,12 @@ input[type="radio"]:checked::before {
     flex-grow: 7;
   }
 
-  #informationItemTitle img {
+  #information-item-iitle img {
     flex-grow: 1;
     margin-right: 30px;
   }
 
-  .informationItem p {
+  .information-item p {
     margin: 0 40px 40px 40px;
     font-family: "Noto Sans", sans-serif;
     font-size: 160%;
@@ -463,12 +467,12 @@ input[type="radio"]:checked::before {
 
 
 /*Acacia Garden*/
-.MainTitle {
+.main-title {
   background-color: #CAD3DE;
   padding: 5px;
 }
 
-.MainTitle h1 {
+.main-title h1 {
   font-family: "Libre Baskerville", serif;
   font-weight: 500;
   color: #29426B;
@@ -477,7 +481,7 @@ input[type="radio"]:checked::before {
 
 /*search*/
 
-.searchBar {
+.search-bar {
   width: max-content;
   align-items: center;
   justify-self: center;
@@ -489,11 +493,11 @@ input[type="radio"]:checked::before {
   transition: box-shadow 0.2s;
 }
 
-.searchBar:focus-within {
+.search-bar:focus-within {
   box-shadow: 0 0 2px #000000;
 }
 
-.searchInput {
+.search-input {
   width: 900px;
   margin-left: 14px;
   font-family: "Noto Sans", sans-serif;
@@ -505,15 +509,15 @@ input[type="radio"]:checked::before {
   color: #000000;
   }
 
-  .searchInput::placeholder, 
-  .searchIcon {
+  .search-input::placeholder, 
+  .search-icon {
     color: #9e9e9e;
   }
     
 
   /*body*/
 
-.gardenBody {
+.garden-body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
@@ -530,7 +534,7 @@ input[type="radio"]:checked::before {
   height: 100%;
 }
 
-.previewTitleDiv {
+.preview-title-div {
   width: 85%;
   display: block;
   border-radius: 15px;
@@ -540,7 +544,7 @@ input[type="radio"]:checked::before {
   margin: 30px auto 20px auto;
 }
 
-.previewTitleOutput {
+.preview-title-output {
   margin: 20px;
   font-family: "Libre Baskerville", serif;
   font-weight: 500;
@@ -548,13 +552,13 @@ input[type="radio"]:checked::before {
   color: #1f1f20;
 }
 
-.previewAuthorOutput {
+.preview-author-output {
   font-family: "Libre Baskerville", serif;
   font-weight: 500;
   font-size: 80%;
 }
 
-.previewBodyDiv {
+.preview-body-div {
   width: 85%;
   min-height: 150px;
   flex-grow: 1;
@@ -568,7 +572,7 @@ input[type="radio"]:checked::before {
   margin: auto;
 }
 
-.previewBodyOutput {
+.preview-body-output {
   font-family: "EB Garamond", serif;
   font-weight: 400;
   font-size: 130%;
@@ -576,15 +580,15 @@ input[type="radio"]:checked::before {
   margin: 20px;
 }
 
-.previewLikesGrid {
+.preview-likes-grid {
   display: grid;
-  grid-template-rows: 1;
-  grid-template-columns: 1fr 2fr 9fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 2fr 12fr;
   align-items: center;
   margin: 10px 25px;
 }
 
-.likeButton {
+.like-button {
   background-color: #F5EDED;
   border: none;
   padding: 0;
@@ -594,16 +598,16 @@ input[type="radio"]:checked::before {
   
 }
 
-.likeButton:hover {
+.like-button:hover {
    transform: scale(1.1);
 }
 
-.likeButton.disabled {
+.like-button.disabled {
   opacity: 0.5;
   transform: none;
 }
 
-.likeCount {
+.like-count {
   padding: 0;
   display: inline-block;
   align-self: center;
@@ -622,7 +626,7 @@ input[type="radio"]:checked::before {
 
 /*editor*/
 
-.editorBody {
+.editor-body {
   justify-self: center;
   width: 70%;
   height: 70%;
@@ -634,7 +638,7 @@ input[type="radio"]:checked::before {
   padding: 20px;
 }
 
-.storyInformation {
+.story-information {
   border: none;
   font-family: "Libre Baskerville", serif;
   font-size: 20px;
@@ -643,11 +647,11 @@ input[type="radio"]:checked::before {
   padding: 5px;
 }
 
-.storyInformation:focus {
+.story-information:focus {
   border: 1px solid #CAD3DE;
 }
 
-.allOptionButtons {
+.all-option-buttons {
   float: right;
 }
 
@@ -663,7 +667,7 @@ input[type=number] {
 
 }
 
-.optionButton {
+.option-button {
   border: 0px;
   font-size: 20px;
   outline: none;
@@ -674,7 +678,7 @@ input[type=number] {
   margin-left: 5px;
 }
 
-.optionButton:hover {
+.option-button:hover {
   background-color: #e8ebee;
 }
 
@@ -682,7 +686,7 @@ input[type=number] {
     background-color: #e8ebee;
   }
 
-#editorLine {
+#editor-line {
   background-color: #CAD3DE;
   height: 2px;
   border: none;
@@ -694,32 +698,32 @@ input[type=number] {
   padding: 10px;
   border-radius: 3px;
   outline: none;
-  font-size: 18px;
+  font-size: 20px;
   border: none;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "EB Garamond", serif;
   resize: vertical;
   }
 
-  .submitFlex {
+  .submit-flex {
   display: flex;
   justify-content: center;
   }
 
-  #submitPost {
+  #submit-post {
     width: 72%;
     height: 40px;
-    background-color: #cad3de;
+    background-color: #657FA4;
     outline: none;
     border: 1px solid #CAD3DE;
     border-radius: 10px;
     font-family: "Libre Baskerville", serif;
     font-size: 18px;
-    color: #6b6b6b;
+    color: #ffffff;
     margin: 20px;
   }
 
-  #submitPost:hover {
-    background-color: #657FA4;
+  #submit-post:hover {
+    background-color: #29426B;
     color: white;
   }
 
@@ -738,7 +742,7 @@ input[type=number] {
 
   /* posts */
 
-  .postBody {
+  .post-body {
     justify-self: center;
     width: 40%;
     height: auto;
@@ -752,23 +756,23 @@ input[type=number] {
   }
 
 
-  #postTitle {
+  #post-title {
   font-family: "Libre Baskerville", serif;
   font-weight: 500;
   color: #000000;
   text-align: center;
   }
 
-  #postAuthor {
+  #post-author {
   font-family: "Libre Baskerville", serif;
   font-weight: 500;
   color: #000000;
   text-align: right;
   }
 
-  #postContent {
+  #post-content {
   font-size: 18px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "EB Garamond", serif;
   margin-top: 50px;
   }
  

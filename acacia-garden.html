@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editor</title>
+    <title>Acacia Garden</title>
     <link href="./images/logo.png" rel="shortcut icon" type="img/x-icon">
     <link href="./style.css" rel="stylesheet" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,9 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search">
 </head>
-<body> 
+    
+<body>
     <nav class="navbar"> <!-- Navigation bar -->
         <div class="nav-item1">
             <img id="acaciapages-title" src="./images/acaciapages-title.png" alt="Acaciapages title" width="260"> 
@@ -27,39 +28,23 @@
         </div>
     </nav>
 
-  <hr class="navbar-line">
+    <hr class="navbar-line">
     <br>
     <br>
 
-  <div class="main-title"><h1>Create Your Story</h1></div> <!-- Header -->
-    <br>
-    <br>
+    <div class="main-title"><h1>Acacia Garden</h1></div> <!-- Header -->
 
-  <div class="editor-body"> <!-- Editor -->
-    <input id="story-title" class="story-information" placeholder="Edit Title">
-    <input id="story-author" class="story-information" placeholder="Author Name">
+    <form>
+        <div class="search-bar"> <!-- Search bar -->
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input class="search-input" type="search" placeholder="Search by title or author">
+        </div>
+    </form>
 
-    <div class="all-option-buttons"> <!-- Tool bar -->
-    <input type="number" id="font-size" min="1" max="100" value="20" onchange="f1(this)">
-    <button type="button" class="option-button" onclick="f2(this)"> <i class="fa-solid fa-bold"></i></button>
-    <button type="button" class="option-button" onclick="f3(this)"> <i class="fa-solid fa-italic"></i></button>
-    <button type="button" class="option-button" onclick="f4(this)"> <i class="fa-solid fa-strikethrough"></i></button>
-    <button type="button" class="option-button" onclick="f5(this)"> <i class="fa-solid fa-underline"></i></button>
-    <button type="button" class="option-button" onclick="f6(this)"> <i class="fa-solid fa-align-left"></i></button>
-    <button type="button" class="option-button" onclick="f7(this)"> <i class="fa-solid fa-align-center"></i></button>
-    <button type="button" class="option-button" onclick="f8(this)"> <i class="fa-solid fa-align-right"></i></button>
-    </div>
-    <hr id="editor-line">
+    <div id="posts" class="garden-body"></div> <!-- preview cards -->
 
-    <textarea id="text-area" contenteditable="true" placeholder="Start writing here..."></textarea> <!-- Textarea -->
-    <p id="word-count">Word Count: 0</p>
-  </div>
 
-  <div class="submit-flex"> <!-- Submit button -->
-  <button id="submit-post">Publish</button>
-  </div>
-
- <div class="footer"> <!-- Footer -->
+     <div class="footer"> <!-- Footer -->
         <h1>Acaciapages</h1>
         <hr id="footer-line1">
         <hr id="footer-line2">
@@ -74,7 +59,9 @@
     </div>
 
 
-<script type="module" src="./editor.js"></script> <!-- Javascript -->
+<script type="module" src="./acacia-garden.js"></script> <!-- Javascript -->
 </body>
 </html>
+
+
 

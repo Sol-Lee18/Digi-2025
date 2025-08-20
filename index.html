@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <link href="./Images/logo.png" rel="shortcut icon" type="img/x-icon">
+    <link href="./images/logo.png" rel="shortcut icon" type="img/x-icon">
     <link href="./style.css" rel="stylesheet" type="text/css">
-    <link href="./script.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,72 +13,74 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navItem1">
-            <img id="AcaciapagesTitle" src="./Images/acaciapagesTitle.png" alt="AcaciapagesTitle" width="260"> 
+    <nav class="navbar"> <!-- Navigation bar -->
+        <div class="nav-item1">
+            <img id="acaciapages-title" src="./images/acaciapages-title.png" alt="Acaciapages title" width="260"> 
         </div>
-        <div class="navItem2">
+        <div class="nav-item2">
             <ul>
-                <li><a href="./index.html"><img id="navbarHomeIcon" src="./Images/navbarHomeIcon.png" width="80"></a></li>
-                <li><a href="./acaciaGarden.html"><img id="navbarGardenIcon" src="./Images/navbarGardenIcon.png" width="80"></a></li>
-                <li><a href="./editor.html"><img id="navbarCreateIcon" src="./Images/navbarCreateIcon.png" width="80"></a> </li>
+                <li><a href="./index.html"><img id="navbar-home-icon" alt="navbarHomeIcon" src="./images/navbar-home-icon.png" width="80"></a></li>
+                <li><a href="./acacia-garden.html"><img id="navbar-garden-icon" alt="navbarGardenIcon" src="./images/navbar-garden-icon.png" width="80"></a></li>
+                <li><a href="./editor.html"><img id="navbar-create-icon" alt="navbarCreateIcon" src="./images/navbar-create-icon.png" width="80"></a> </li>
             </ul>
         </div>
-    
     </nav>
 
 
-    <div class="hero">
-        <img alt="logoImage" src="./Images/acaciapagesHeroLogo.png">
+    <div class="hero"> <!-- hero image -->
+        <img alt="logo-image" src="./images/acaciapages-hero-logo.png">
         <a href="./editor.html">Start Writing</a>
     </div>
     <hr>
 
-    <div id="quotes">
-        <input type="radio" name="position" />
-        <input type="radio" name="position" />
-        <input type="radio" name="position" checked/>
-        <input type="radio" name="position" />
-        <input type="radio" name="position" />
+    <div id="quotes"> <!-- quotes carousel -->
+        <input type="radio" name="position">
+        <input type="radio" name="position">
+        <input type="radio" name="position" checked>
+        <input type="radio" name="position">
+        <input type="radio" name="position">
         
         <main id="carousel">
-            <div class="carouselItem">
-                <h3 class="quoteWriting">"The most valuable of all talents is that of never using two words when one will do."</h3>
+            <div class="carousel-item">
+                <h3 class="quote-writing">"The most valuable of all talents is that of never using two words when one will do."</h3>
                 <p class="author">- Tomas Jefferson</p>
             </div>
-            <div class="carouselItem">
-                <h3 class="quoteWriting">"Write what will stop your breath if you don't write."</h3>
+            <div class="carousel-item">
+                <h3 class="quote-writing">"Write what will stop your breath if you don't write."</h3>
                 <p class="author">- Grace Paley</p>
             </div>
-            <div class="carouselItem">
-                <h3 class="quoteWriting">"Amateurs sit and wait for inspiration, the rest of us just get up and go to work."</h3>
+            <div class="carousel-item">
+                <h3 class="quote-writing">"Amateurs sit and wait for inspiration, the rest of us just get up and go to work."</h3>
                 <p class="author">- Stephen King</p>
             </div>
-            <div class="carouselItem">
-                <h3 class="quoteWriting">"A blank piece of paper is God's way of telling us how hard it is to be God.”</h3>
+            <div class="carousel-item">
+                <h3 class="quote-writing">"A blank piece of paper is God's way of telling us how hard it is to be God.”</h3>
                 <p class="author">- Sidney Sheldon</p>
             </div>
-            <div class="carouselItem">
-                <h3 class="quoteWriting">“You must stay drunk on writing so reality cannot destroy you.”</h3>
+            <div class="carousel-item">
+                <h3 class="quote-writing">“You must stay drunk on writing so reality cannot destroy you.”</h3>
                 <p class="author">- Ray Bradbury</p>
             </div>
         </main> 
     </div>
     <hr>
 
-    <div class="homepageBody">
-        <div class="leftColumn">
-            <div class="totalPosts">
-                <img alt="targetImage" src="./Images/targetImage.png" width="80%">
-                <h2>Our Acacia Trees</h2>
+    <div class="homepage-body"> <!-- main body -->
+        <div class="left-column">
+            <div class="total-posts"> <!-- statistics on total posts published -->
+                <img alt="target-image" src="./images/twig.png" width="80">
+                <h2>How Many?</h2>
                 <h3>Total Number of Acacia Trees Published</h3>
-                <span id="totalPostsCount"></span>
+                <span id="total-posts-count"></span>
             </div>
-            <img id="acaciaTreeImage" src="./Images/acaciaTreeImage.jpg">
+            <div>
+                <img id="acacia-tree-image" alt="acaciaTreeImage" src="./images/acacia-tree-image.png"> <!-- image of acacia tree -->
+                <p id="credit-image">Image licensed under <a href="https://pixabay.com/photos/africa-sunset-safari-kenya-mara-3002460/">Pixabay</a></p>
+            </div>
         </div>
-        <div class="informationItem">
-            <div id="informationItemTitle">
-                <img alt="fountainPenIcon" src="./Images/acaciaTreeInformationIcon.png" width="1">
+        <div class="information-item"> <!-- introduction -->
+            <div id="information-item-title">
+                <img alt="fountain-pen-icon" src="./images/acacia-tree-information-icon.png" width="1">
             <h1>The Acacia Tree</h1>
             </div>
             <p> Welcome to The Acacia Tree - where stories grow, one idea at a time. 
@@ -92,54 +93,21 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer"> <!-- Footer -->
         <h1>Acaciapages</h1>
-        <hr id="footerLine1">
-        <hr id="footerLine2">
+        <hr id="footer-line1">
+        <hr id="footer-line2">
         <div class="shortcuts">
             <ul>
-                <li><a href="./index.html"><img src="./Images/footerHomeIcon.png" width="40px"></a></li>
-                <li><a href="./acaciaGarden.html"><img src="./Images/footerGardenIcon.png" width="40px"></a></li>
-                <li><a href="./editor.html"><img src="./Images/footerCreateIcon.png" width="40px"></a></li>
+                <li><a href="./index.html"><img alt="footer-home-icon" src="./images/footer-home-icon.png" width="40"></a></li>
+                <li><a href="./acacia-garden.html"><img alt="footer-garden-icon" src="./images/footer-garden-icon.png" width="40"></a></li>
+                <li><a href="./editor.html"><img alt="footer-create-icon" src="./Images/footer-create-icon.png" width="40"></a></li>
             </ul>
         </div>
         <p>©2025SolLee</p>
     </div>
 
-    <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-  import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
-
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDNCknujv99lhPkfXdQ4dRJVc-H8ZJg-M8",
-    authDomain: "acacia-pages-database.firebaseapp.com",
-    databaseURL: "https://acacia-pages-database-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "acacia-pages-database",
-    storageBucket: "acacia-pages-database.firebasestorage.app",
-    messagingSenderId: "456686471317",
-    appId: "1:456686471317:web:8e04adffa50507c7ecf39c",
-    measurementId: "G-47S5H3ZR6S"
-  };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app);
-
-    const postCountLabel = document.getElementById('totalPostsCount');
-
-    const postsRef = ref(db, "posts");
-
-    onValue(postsRef, (snapshot) => {
-        const count = snapshot.size; 
-        postCountLabel.textContent = count;
-    });
-
+    <script type="module" src="./index.js"></script> <!-- Javascript -->
 </script>
 
 </body>
