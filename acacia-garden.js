@@ -38,7 +38,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebas
                             <p class="preview-body-output">${post.content ? post.content.split(" ").slice(0, 30).join(" ") + (post.content.split(" ").length > 30 ? "..." : "") : ""}</p>
                         </div>
                         <div class="preview-likes-grid">
-                            <button class="like-button"><img src="./images/heart.png"></button>
+                            <button class="like-button"><img alt="like button image" src="./images/heart.png"></button>
                             <span class="like-count">${post.likes || 0}</span>
                         </div>
                     `;
